@@ -11,6 +11,11 @@ public class ClientList {
 
     public ClientList() {}
 
+    public ClientList(String firstname, String lastname) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+    }
+
     public ClientList(int id, String firstname, String lastname) {
         this.id = id;
         this.firstname = firstname;
