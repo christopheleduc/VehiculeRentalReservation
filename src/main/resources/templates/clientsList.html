@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<h1>Clients List</h1>
+<a href="addClient">Add Client</a>
+<br/><br/>
+<div>
+    <table border="1">
+        <tr>
+            <th>Id</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+        </tr>
+        <tr th:each ="clientlist : ${clientlists}">
+            <td th:utext="${clientlist.id}">...</td>
+            <td th:utext="${clientlist.firstname}">...</td>
+            <td th:utext="${clientlist.lastname}">...</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
